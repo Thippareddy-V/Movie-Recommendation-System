@@ -126,8 +126,11 @@ ARTIFACTS_DIR = BASE_DIR / "artifacts"
 
 load_dotenv(BASE_DIR / ".env")
 
-TMDB_API_KEY = os.getenv("TMDB_API_KEY")
-OMDB_API_KEY = os.getenv("OMDB_API_KEY")
+# TMDB_API_KEY = os.getenv("TMDB_API_KEY")
+# OMDB_API_KEY = os.getenv("OMDB_API_KEY")
+
+TMDB_API_KEY = st.secrets.get("TMDB_API_KEY", "")
+OMDB_API_KEY = st.secrets.get("OMDB_API_KEY", "")
 
 TMDB_BASE_URL = "https://api.themoviedb.org/3/movie"
 TMDB_IMAGE_URL = "https://image.tmdb.org/t/p/w500"
