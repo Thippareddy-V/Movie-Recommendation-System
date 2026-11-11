@@ -121,10 +121,10 @@ from src.recommendation import get_recommendations
 # 1. PATHS AND CONFIGURATION
 # --------------------------------------------------
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+
 ARTIFACTS_DIR = BASE_DIR / "artifacts"
 
-load_dotenv(BASE_DIR / ".env")
+load_dotenv(BASE_DIR / ".ENV")
 
 TMDB_API_KEY = os.getenv("TMDB_API_KEY")
 OMDB_API_KEY = os.getenv("OMDB_API_KEY")
