@@ -334,10 +334,7 @@ if st.button("Show Recommendation", type="primary"):
 
                     with col:
                         st.text(movie["title"])
-                        st.image(
-                            poster,
-                            use_container_width=True
-                        )
+                        st.image(poster, width="stretch")
 
         except Exception:
             logger.exception("Recommendation request failed.")
